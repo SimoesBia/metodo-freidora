@@ -1,37 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método Freidora de Aire Saludable</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preconectar com servidores de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Preload da Imagem Principal (Zera o atraso do LCP) -->
+    <link rel="preload" href="img/capa.web.webp" as="image" fetchpriority="high">
+
+    <!-- CSS CRÍTICO (Injetado para carregamento instantâneo da dobra superior) -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; color: #ffffff; line-height: 1.6; background-color: #0f0204; overflow-x: hidden; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .bg-wine { background-color: #2a080c; color: #ffffff; }
+        .top-bar { background-color: #d90429; color: #ffffff; text-align: center; padding: 10px 15px; font-size: 0.9rem; font-weight: 600; }
+        .hero { padding: 60px 0; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .hero-badge { background-color: rgba(217, 4, 41, 0.15); color: #ff4d6d; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; display: inline-block; margin-bottom: 20px; border: 1px solid rgba(217, 4, 41, 0.3); }
+        .hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.25; margin-bottom: 20px; color: #ffffff; }
+        .hero p { margin-bottom: 20px; }
+        .hero .subtitle { font-size: 1.15rem; color: #f2d6d9; }
+        .micro-benefits { margin: 20px 0; line-height: 1.8; }
+        .micro-benefits p { font-weight: 600; color: #ffd166; font-size: 1.05rem; margin-bottom: 8px !important; display: flex; align-items: center; gap: 8px; }
+        .hero-cta-wrapper { margin-top: 25px; }
+        .hero-microcopy { margin-top: 12px; font-size: 0.85rem; color: #b38c91; font-weight: 600; }
+        .hero-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .btn-primary { display: inline-block; background: linear-gradient(135deg, #e53935, #b71c1c); color: #ffffff; padding: 18px 45px; font-size: 1.25rem; font-weight: 800; text-decoration: none; border-radius: 6px; border-bottom: 4px solid #8e1010; box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4); transition: all 0.2s; text-align: center; margin-top: 10px; }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4); } 50% { transform: scale(1.04); box-shadow: 0 8px 25px rgba(229, 57, 53, 0.7); } 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4); } }
+        .pulse { animation: pulse 2s infinite ease-in-out; }
+        .animate-fade-in-left { opacity: 0; transform: translateX(-40px); animation: fadeInLeft 1s forwards cubic-bezier(0.16, 1, 0.3, 1); }
+        .animate-fade-in-right { opacity: 0; transform: translateX(40px); animation: fadeInRight 1s forwards cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes fadeInLeft { to { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInRight { to { opacity: 1; transform: translateX(0); } }
+        @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; text-align: center; } .hero-badge { margin: 0 auto 20px auto; display: table; } .micro-benefits { display: inline-block; text-align: left; } .btn-primary { width: 100%; padding: 15px; font-size: 1.1rem; } }
+    </style>
+
+    <!-- Restante dos estilos não-críticos (Carrega sem travar o topo) -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+
+    <!-- Script UTMfy Otimizado (Async) -->
+    <script async src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids></script>
 
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1531701071821031');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1531701071821031');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -44,37 +77,29 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
     <header class="hero bg-wine">
         <div class="container hero-grid">
             <div class="hero-content animate-fade-in-left">
-                <!-- 1. Badge -->
                 <span class="hero-badge">🔥 Método Freidora de Aire Saludable </span>
-                
-                <!-- 2. Headline Ajustada -->
                 <h1>Comidas Crujientes, Rápidas y Saludables Con Tu Freidora de Aire</h1>
-                
-                <!-- 3. Subheadline Otimizada -->
                 <p class="subtitle">Un método simple para preparar recetas rápidas, sabrosas y saludables en minutos, incluso si nunca has cocinado antes.</p>
                 
-                <!-- 4. Micro-benefícios -->
                 <div class="micro-benefits">
                     <p>✔ Fácil de seguir paso a paso</p>
                     <p>✔ Recetas rápidas para el día a día</p>
                     <p>✔ Menos aceite, más sabor</p>
                 </div>
 
-                <!-- CTA Principal da Hero -->
                 <div class="hero-cta-wrapper">
                     <a href="#cta-final" class="btn-primary pulse">ACCEDER AL MÉTODO AHORA</a>
                     <p class="hero-microcopy">Acceso inmediato • Pago único de $5.99 • Sin complicaciones</p>
                 </div>
             </div>
             
-            <!-- Imagem Principal -->
             <div class="hero-image animate-fade-in-right">
-                <img src="img/capa.web.webp" fetchpriority="high" alt="Método Freidora de Aire" onerror="this.src='https://via.placeholder.com/500x400/2a080c/ffffff?text=Tu+Banner+Aquí'">
+                <img src="img/capa.web.webp" width="500" height="400" fetchpriority="high" alt="Método Freidora de Aire" onerror="this.src='https://via.placeholder.com/500x400/2a080c/ffffff?text=Tu+Banner+Aquí'">
             </div>
         </div>
     </header>
 
-    <!-- BENEFÍCIOS EXCLUSIVOS (FUNDO GRADIENTE SUAVE) -->
+    <!-- BENEFÍCIOS EXCLUSIVOS -->
     <section class="benefits bg-light" id="beneficios">
         <div class="container">
             <h2 class="animate-scroll">Beneficios Exclusivos</h2>
@@ -82,21 +107,21 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
             <div class="grid-3">
                 <div class="card-benefit animate-scroll">
                     <div class="card-img-wrapper">
-                        <img src="img/beneficio1.png" loading="lazy" alt="Cocina Saludable" onerror="this.src='https://via.placeholder.com/300x180/400c12/ffffff?text=Imagen+Beneficio+1'">
+                        <img src="img/beneficio1.web.webp" loading="lazy" width="300" height="180" alt="Cocina Saludable" onerror="this.src='https://via.placeholder.com/300x180/400c12/ffffff?text=Imagen+Beneficio+1'">
                     </div>
                     <h3>Cocina Saludable</h3>
                     <p>Reduce drásticamente las calorías al cocinar sin aceite, disfrutando de platos crujientes y sabrosos sin culpa.</p>
                 </div>
                 <div class="card-benefit animate-scroll">
                     <div class="card-img-wrapper">
-                        <img src="img/beneficio2.png" loading="lazy" alt="Aprobación Familiar" onerror="this.src='https://via.placeholder.com/300x180/400c12/ffffff?text=Imagen+Beneficio+2'">
+                        <img src="img/beneficio2.web.webp" loading="lazy" width="300" height="180" alt="Aprobación Familiar" onerror="this.src='https://via.placeholder.com/300x180/400c12/ffffff?text=Imagen+Beneficio+2'">
                     </div>
                     <h3>Aprobación Familiar</h3>
                     <p>Recetas que conquistan a todos, desde los más pequeños hasta los más exigentes, con versiones saludables de sus platos favoritos.</p>
                 </div>
                 <div class="card-benefit animate-scroll">
                     <div class="card-img-wrapper">
-                        <img src="img/beneficio3.png" loading="lazy" alt="Ahorro de tiempo" onerror="this.src='https://via.placeholder.com/300x180/400c12/ffffff?text=Imagen+Beneficio+3'">
+                        <img src="img/beneficio3.web.webp" loading="lazy" width="300" height="180" alt="Ahorro de tiempo" onerror="this.src='https://via.placeholder.com/300x180/400c12/ffffff?text=Imagen+Beneficio+3'">
                     </div>
                     <h3>Ahorro de Tiempo</h3>
                     <p>Prepara comidas completas en 15-25 minutos, perfectas para un estilo de vida moderno y sin complicaciones.</p>
@@ -105,7 +130,7 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- RECEITAS (FUNDO VINHO) -->
+    <!-- RECEITAS -->
     <section class="recipes bg-wine" id="recetas">
         <div class="container">
             <h2 class="animate-scroll">Lo Que Vas A Aprender A Preparar</h2>
@@ -127,7 +152,7 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- DEPOIMENTOS / TESTIMONIOS (FUNDO GRADIENTE SUAVE) -->
+    <!-- DEPOIMENTOS / TESTIMONIOS -->
     <section class="testimonials bg-light" id="testimonios">
         <div class="container">
             <h2 class="animate-scroll">Testimonios</h2>
@@ -135,26 +160,25 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
             
             <div class="grid-3 testimonial-images">
                 <div class="screenshot animate-scroll">
-                    <img src="img/depo1.png" loading="lazy" alt="Testimonio 1" onerror="this.src='https://via.placeholder.com/320x450/400c12/ffffff?text=Tu+Print+De+WhatsApp+1'">
+                    <img src="img/depo1.web.webp" loading="lazy" width="320" height="450" alt="Testimonio 1" onerror="this.src='https://via.placeholder.com/320x450/400c12/ffffff?text=Tu+Print+De+WhatsApp+1'">
                 </div>
                 <div class="screenshot animate-scroll">
-                    <img src="img/depo2.png" loading="lazy" alt="Testimonio 2" onerror="this.src='https://via.placeholder.com/320x450/400c12/ffffff?text=Tu+Print+De+WhatsApp+2'">
+                    <img src="img/depo2.web.webp" loading="lazy" width="320" height="450" alt="Testimonio 2" onerror="this.src='https://via.placeholder.com/320x450/400c12/ffffff?text=Tu+Print+De+WhatsApp+2'">
                 </div>
                 <div class="screenshot animate-scroll">
-                    <img src="img/depo3.png" loading="lazy" alt="Testimonio 3" onerror="this.src='https://via.placeholder.com/320x450/400c12/ffffff?text=Tu+Print+De+WhatsApp+3'">
+                    <img src="img/depo3.web.webp" loading="lazy" width="320" height="450" alt="Testimonio 3" onerror="this.src='https://via.placeholder.com/320x450/400c12/ffffff?text=Tu+Print+De+WhatsApp+3'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BONOS EXCLUSIVOS (FUNDO VINHO) -->
+    <!-- BONOS EXCLUSIVOS -->
     <section class="bonus bg-wine" id="bonus">
         <div class="container">
             <h2 class="animate-scroll">Bonos Exclusivos</h2>
             <p class="section-subtitle animate-scroll">Y como si fuera poco, por esta única ocasión te llevas estos increíbles bonos de regalo:</p>
             
             <div class="bonus-wrapper">
-                <!-- Bônus 1 -->
                 <div class="premium-bonus-card animate-scroll">
                     <div class="gold-badge">🎁 BONO 1</div>
                     <h3>Libro De Cocina De La Freidora De Aire</h3>
@@ -165,10 +189,9 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
                     </div>
                 </div>
 
-                <!-- Bônus 2 -->
                 <div class="premium-bonus-card animate-scroll">
                     <div class="gold-badge">🎁 BONO 2</div>
-                    <h3>¡Revoluciona tus compras y ahorra dinero cada mes!</h3>
+                    <h3>¡Revoluciona tus compras y ahorra dinheiro cada mes!</h3>
                     <p>El manual inteligente para organizar tu despensa, seleccionar los mejores ingredientes y gastar mucho menos en el supermercado.</p>
                     <div class="price-strikethrough">
                         <span class="before">Antes $14.00</span>
@@ -179,7 +202,7 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- FAQ (FUNDO GRADIENTE SUAVE) -->
+    <!-- FAQ -->
     <section class="faq bg-light" id="faq">
         <div class="container">
             <h2 class="animate-scroll">Preguntas Frecuentes</h2>
@@ -200,7 +223,7 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- CTA FINAL (FUNDO VINHO) -->
+    <!-- CTA FINAL -->
     <section class="cta-final bg-wine" id="cta-final">
         <div class="container">
             <div class="checkout-box animate-scroll">
@@ -216,7 +239,6 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
                 <p class="discount-notice">🔥 Oferta especial — acceso inmediato con pago único</p>
             </div>
 
-            <!-- ÁREA DE GARANTIA -->
             <div class="guarantee-box animate-scroll">
                 <div class="guarantee-badge">🛡️</div>
                 <div class="guarantee-text">
@@ -229,12 +251,49 @@ src="https://www.facebook.com/tr?id=1531701071821031&ev=PageView&noscript=1"
 
     <!-- RODAPÉ -->
     <footer class="footer">
-        <div class="container">
+        <div class="container" style="text-align: center; padding: 40px 20px; color: #b38c91; font-size: 0.85rem; border-top: 1px solid #200508;">
             <p>&copy; 2026 Método Freidora de Aire Saludable. Todos los derechos reservados.</p>
-            <p class="disclaimer">Este sitio web no está afiliado a Facebook ni a ninguna entidad de Facebook de ninguna manera. Una vez dejas la red social, la responsabilidad corre por cuenta de nuestro sitio.</p>
+            <p style="margin-top: 10px; line-height: 1.4;">Este sitio web no está afiliado a Facebook ni a ninguna entidad de Facebook de ninguna manera. Una vez dejas la red social, la responsabilidad corre por cuenta de nuestro sitio.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT PERFORMATIVO -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const icon = question.querySelector('span');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                        i.querySelector('.faq-question span').textContent = '+';
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.textContent = '-';
+                    }
+                });
+            });
+
+            // Intersection Observer para as Animações
+            const animatedElements = document.querySelectorAll('.animate-scroll');
+            const scrollObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05, rootMargin: "0px 0px -20px 0px" });
+            
+            animatedElements.forEach(element => scrollObserver.observe(element));
+        });
+    </script>
 </body>
 </html>
