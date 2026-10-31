@@ -1,6 +1,6 @@
 # Método Freidora de Aire Saludable
 
-Página de vendas (landing page) desenvolvida do zero para divulgar e vender um recetário digital de receitas para air fryer. Criei o projeto para uso real em campanhas de marketing digital, cuidando da estrutura, do design, do desempenho e da integração com ferramentas de rastreamento e checkout.
+Página de vendas (landing page) desenvolvida do zero para divulgar e vender um produto digital de receitas para air fryer. Criei o projeto para uso real em campanhas de marketing digital, cuidando da estrutura, do design, do desempenho e da integração com ferramentas de rastreamento e checkout.
 
 🔗 **Página online:** https://simoesbia.github.io/metodo-freidora/
 
@@ -81,6 +81,5 @@ A página é publicada pelo **GitHub Pages** a partir da branch principal do rep
 
 ## Autora
 
-**Beatriz Simões** · [@SimoesBia](https://github.com/SimoesBia)
+**Bruna Beatriz** · [@SimoesBia](https://github.com/SimoesBia)
 
-Aberta a oportunidades de estágio. Fique à vontade para entrar em contato pelo meu perfil do GitHub.
